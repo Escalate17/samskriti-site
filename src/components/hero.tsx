@@ -44,15 +44,15 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.95]);
-  const y = useTransform(scrollYProgress, [0, 0.8], [0, 100]);
+  const opacity = useTransform(scrollYProgress, [0.45, 0.95], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0.45, 0.95], [1, 0.96]);
+  const y = useTransform(scrollYProgress, [0.45, 0.95], [0, 80]);
 
   return (
     <section
       ref={containerRef}
       id="hero"
-      className="relative min-h-[100vh] py-24 sm:py-32 lg:py-40 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100vh] py-20 sm:py-24 lg:py-28 flex items-center justify-center overflow-hidden"
     >
       {/* Ambient gradient orbs — large and dramatic */}
       <div className="orb orb-saffron w-[800px] h-[800px] -top-[300px] -left-[300px] animate-[float_12s_ease-in-out_infinite] opacity-70" />
@@ -79,7 +79,7 @@ export function Hero() {
           transition={
             shouldReduceMotion ? { duration: 0 } : { duration: 1, delay: 0.2 }
           }
-          className="text-overline mb-12"
+          className="text-overline mb-8"
         >
           One shared memory across every AI tool
         </motion.p>
@@ -118,7 +118,7 @@ export function Hero() {
           transition={
             shouldReduceMotion ? { duration: 0 } : { duration: 0.8, delay: 2.0, ease: "easeOut" }
           }
-          className="text-[14px] sm:text-[15px] font-mono tracking-wide mb-14"
+          className="text-[14px] sm:text-[15px] font-mono tracking-wide mb-10"
         >
           <span className="text-gradient font-medium">Live now</span>
           <span className="text-white/25"> · </span>
