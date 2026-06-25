@@ -2,7 +2,7 @@
 
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef, useState } from "react";
-import { Copy, Check, Terminal } from "lucide-react";
+import { Copy, Check, Terminal, ArrowRight } from "lucide-react";
 
 /* ── Copyable code block ─────────────────────────────────────────────── */
 function CodeBlock({ code }: { code: string }) {
@@ -207,6 +207,23 @@ export function Install() {
             </p>
           </Step>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.8, delay: 0.4 }}
+          className="text-center mt-10"
+        >
+          <a
+            href="https://github.com/Escalate17/samskriti-project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[15px] font-light text-white/55 hover:text-white transition-colors duration-300"
+          >
+            Full documentation on GitHub
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.p>
       </div>
     </section>
   );

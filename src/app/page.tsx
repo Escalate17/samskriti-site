@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Install } from "@/components/install";
+import { Demo } from "@/components/demo";
 import { PrivacyBand } from "@/components/privacy-band";
 import { Pricing } from "@/components/pricing";
 import { HowItWorks } from "@/components/how-it-works";
@@ -16,6 +17,7 @@ export default function Home() {
         {/* Live product, first and brightest */}
         <Hero />
         <Install />
+        <Demo />
         <PrivacyBand />
         <Pricing />
         {/* Where this is going — the long-term vision */}
