@@ -54,10 +54,10 @@ export function Navbar() {
             Install
           </a>
           <a
-            href="#compare"
+            href="#pricing"
             className="text-[13px] font-medium tracking-[0.12em] uppercase text-white/65 hover:text-white transition-colors duration-300"
           >
-            Compare
+            Pricing
           </a>
           <a
             href="#vision"

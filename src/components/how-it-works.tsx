@@ -2,52 +2,7 @@
 
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
-import { Terminal, Code, Cpu, ArrowRight, User, ShieldAlert, GitCommit, HeartHandshake, Sparkles, MessageSquare, History } from "lucide-react";
-
-const steps = [
-  {
-    icon: Terminal,
-    num: "01",
-    title: "Initialize the SDK",
-    description: "Install the package and load the external runtime alongside your agent loop. Initializes in one line of code.",
-    code: `import { SamskritiRuntime } from "@samskriti/sdk";
-
-const runtime = new SamskritiRuntime({
-  agentId: "customer_support_agent_1",
-  storage: "local-encrypted",
-  versioning: true
-});`,
-  },
-  {
-    icon: Code,
-    num: "02",
-    title: "Define State Schema",
-    description: "Establish deterministic bounds, safety gates, and state variables that represent your agent's behavioral contract.",
-    code: `const schema = runtime.registerSchema({
-  behaviorRules: {
-    maxResponseLength: 150,
-    toneConstraints: ["concise", "technical"],
-    forbiddenKeywords: ["guarantee", "always"]
-  },
-  allowDriftCorrection: true
-});`,
-  },
-  {
-    icon: Cpu,
-    num: "03",
-    title: "Execute & Enforce State",
-    description: "Let the LLM handle reasoning. Samskriti manages the behavioral state, committing updates and correcting prompt drift dynamically.",
-    code: `// Retrieve persistent state
-const state = await runtime.getState();
-
-// LLM Reasons based on current state
-const decision = await llm.reason(userInput, state);
-
-// Enforce limits and commit state
-const result = await runtime.commit(decision);
-console.log(result.state.behaviorScore); // 0.98`,
-  },
-];
+import { Cpu, ArrowRight, User, GitCommit, HeartHandshake, Sparkles, MessageSquare, History } from "lucide-react";
 
 export function HowItWorks() {
   const ref = useRef<HTMLDivElement>(null);
@@ -192,62 +147,6 @@ export function HowItWorks() {
             </div>
           </motion.div>
 
-          {/* Section Divider */}
-          <div className="section-divider mb-24" />
-
-          {/* SDK Steps */}
-          <div className="text-center mb-16">
-            <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Implementation</p>
-            <h3 className="heading-section !text-3xl sm:!text-4xl">
-              Developer SDK Integration
-            </h3>
-          </div>
-
-          <div className="space-y-10">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={
-                    shouldReduceMotion
-                      ? { duration: 0 }
-                      : { duration: 0.9, delay: i * 0.15, ease: [0.2, 0, 0, 1] }
-                  }
-                  className="glass-card gradient-border p-0 overflow-hidden"
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-2">
-                    {/* Left — text */}
-                    <div className="p-10 lg:p-12 flex flex-col justify-center">
-                      <div className="flex items-center gap-5 mb-6">
-                        <span className="text-[56px] font-display font-light text-white/[0.06] leading-none">
-                          {step.num}
-                        </span>
-                        <div className="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.06] flex items-center justify-center">
-                          <Icon className="w-4 h-4 text-white/30" />
-                        </div>
-                      </div>
-                      <h3 className="font-display text-2xl sm:text-3xl font-medium mb-4 text-white/90">
-                        {step.title}
-                      </h3>
-                      <p className="text-body-lg !text-white/65">
-                        {step.description}
-                      </p>
-                    </div>
-
-                    {/* Right — code */}
-                    <div className="border-t lg:border-t-0 lg:border-l border-white/[0.04] bg-white/[0.01] p-8 lg:p-10 flex flex-col justify-center">
-                      <pre className="code-block !bg-transparent !border-0 !p-0 text-[15px] leading-[1.9]">
-                        <code>{step.code}</code>
-                      </pre>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
