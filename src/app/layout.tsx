@@ -3,7 +3,7 @@ import Script from "next/script";
 import { CinematicEffects } from "@/components/cinematic-effects";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://samskriti-site.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://samskriti-ten.vercel.app";
 const TITLE = "Samskriti — shared memory for your AI coding tools";
 const DESCRIPTION =
   "Stop re-explaining your project every time you switch between Claude, GPT, and Gemini. One shared memory for all your AI tools.";
