@@ -45,10 +45,10 @@ export function ComparisonTable() {
             </p>
           </div>
 
-          <div className="glass-card overflow-x-auto border border-white/[0.04] rounded-2xl">
+          <div className="overflow-x-auto border border-white/[0.08] rounded-2xl bg-[#070710]">
             <table className="w-full min-w-[600px] border-collapse text-left text-[15px]">
               <thead>
-                <tr className="border-b border-white/[0.06] bg-white/[0.01]">
+                <tr className="border-b border-white/[0.08] bg-black/40">
                   <th className="p-5 font-semibold text-white/65 text-[14px] uppercase tracking-wider">Where this is going</th>
                   <th className="p-5 font-semibold text-white/65 text-[14px] uppercase tracking-wider text-center">ChatGPT / Claude Memory</th>
                   <th className="p-5 font-semibold text-white text-[13px] uppercase tracking-wider text-center bg-indigo/5 border-x border-white/[0.04]">The Samskriti goal</th>
@@ -62,9 +62,9 @@ export function ComparisonTable() {
                     {/* ChatGPT */}
                     <td className="p-5 text-center">
                       {row.chatgpt ? (
-                        <Check className="w-4 h-4 text-white/30 mx-auto" />
+                        <Check className="w-6 h-6 text-emerald-400/80 mx-auto" strokeWidth={2.5} />
                       ) : (
-                        <X className="w-4 h-4 text-white/10 mx-auto" />
+                        <X className="w-6 h-6 text-rose-400/80 mx-auto" strokeWidth={2.5} />
                       )}
                     </td>
 
