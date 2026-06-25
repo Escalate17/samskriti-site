@@ -64,27 +64,29 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="story" className="relative overflow-hidden" ref={ref}>
+    <section id="vision" className="relative overflow-hidden scroll-mt-24" ref={ref}>
       <div className="section-divider" />
       <div className="orb orb-teal w-[500px] h-[500px] top-[10%] right-[-200px] opacity-20" />
 
       <div className="section-container max-w-5xl mx-auto">
-        
-        {/* Section 1 & 2: Story & The Loop */}
+
+        {/* Where this is going — the long-term vision */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: [0.2, 0, 0, 1] }}
           className="text-center mb-20"
         >
-          <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">The Problem</p>
+          <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Where this is going</p>
           <h2 className="heading-section">
-            Today&apos;s AI can remember facts.
+            A shared memory layer
             <br />
-            <span className="text-gradient">But it doesn&apos;t truly grow.</span>
+            <span className="text-gradient">is just step one.</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto mt-6">
-            Every time a conversation ends, your AI restarts as a blank stranger. It recalls what you said, but forgets who it became. Samskriti turns experiences into continuous growth.
+            A shared memory layer is step one. The goal is an AI that carries your context,
+            your style, and your history across every tool you use — one continuous companion,
+            not a dozen strangers.
           </p>
         </motion.div>
 

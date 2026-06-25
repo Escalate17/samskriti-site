@@ -54,7 +54,7 @@ export function TestUserSurvey() {
     <section id="test-user" className="relative overflow-hidden" ref={ref}>
       <div className="section-divider" />
 
-      {/* Dramatic orbs — same palette as the waitlist section */}
+      {/* Dramatic orbs — matches the site's section palette */}
       <div className="orb orb-teal w-[600px] h-[600px] top-[-180px] right-[12%] opacity-12" />
       <div className="orb orb-indigo w-[480px] h-[480px] bottom-[-180px] left-[6%] opacity-12" />
 
@@ -65,13 +65,14 @@ export function TestUserSurvey() {
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: [0.2, 0, 0, 1] }}
           className="text-center"
         >
-          <p className="text-overline mb-6">Help shape it</p>
+          <p className="text-overline mb-6">Tried it?</p>
           <h2 className="heading-section mb-8">
-            Be a <span className="text-gradient">test user.</span>
+            Would you pay for a <span className="text-gradient">hosted version?</span>
           </h2>
           <p className="text-body-lg mb-16 max-w-xl mx-auto">
-            Get early builds and updates as Samskriti grows — and tell us one thing: would
-            you pay for a fully hosted version, so there&apos;s nothing to run yourself?
+            Installed it and given it a spin? Tell us one thing — would you pay for a fully
+            hosted version, with nothing to install or run yourself? Leave your email if you
+            want hosting updates.
           </p>
         </motion.div>
 
@@ -86,7 +87,7 @@ export function TestUserSurvey() {
         >
           {/* Email capture */}
           <label htmlFor="test-user-email" className="block text-sm font-light text-white/50 mb-3">
-            Your email — for early builds &amp; updates
+            Your email — for hosting updates
           </label>
           <input
             type="email"
@@ -184,7 +185,7 @@ export function TestUserSurvey() {
           )}
           {status === "success" && (
             <p className="text-white/40 text-sm font-light mt-4 text-center">
-              You&apos;re on the list — we&apos;ll be in touch.
+              Thanks — your answer&apos;s in.
             </p>
           )}
         </motion.form>

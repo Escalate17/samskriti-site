@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Github } from "lucide-react";
 
 function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
   const shouldReduceMotion = useReducedMotion();
@@ -81,17 +81,17 @@ export function Hero() {
           }
           className="text-overline mb-12"
         >
-          Memory that grows with you
+          One shared memory across every AI tool
         </motion.p>
 
         {/* Main headline — cinematic serif with word-by-word reveal */}
         <h1 className="heading-hero mb-8">
-          <WordReveal text="Your AI" delay={0.4} />
+          <WordReveal text="Your AI tools don't" delay={0.4} />
           <br />
-          <WordReveal text="shouldn't forget" delay={0.8} />
+          <WordReveal text="talk to each other." delay={0.8} />
           <br />
           <span className="text-gradient">
-            <WordReveal text="who it becomes." delay={1.2} />
+            <WordReveal text="Now they can." delay={1.2} />
           </span>
         </h1>
 
@@ -104,9 +104,29 @@ export function Hero() {
               ? { duration: 0 }
               : { duration: 0.8, delay: 1.8, ease: "easeOut" }
           }
-          className="text-body-lg max-w-3xl mx-auto mb-14"
+          className="text-body-lg max-w-3xl mx-auto mb-8"
         >
-          Samskriti helps AI systems grow through experience, so every conversation builds on the last. A local-first behavioral runtime.
+          You use Claude to code, GPT to plan, Gemini for design — and re-explain your project
+          every time you switch. Samskriti gives them one shared memory of your project:
+          decisions, tasks, bugs, conventions. Switch tools without starting over.
+        </motion.p>
+
+        {/* Status line — bright, plain */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={
+            shouldReduceMotion ? { duration: 0 } : { duration: 0.8, delay: 2.0, ease: "easeOut" }
+          }
+          className="text-[14px] sm:text-[15px] font-mono tracking-wide mb-14"
+        >
+          <span className="text-gradient font-medium">Live now</span>
+          <span className="text-white/25"> · </span>
+          <span className="text-white/70">Free</span>
+          <span className="text-white/25"> · </span>
+          <span className="text-white/70">Open-source</span>
+          <span className="text-white/25"> · </span>
+          <span className="text-white/70">MIT licensed</span>
         </motion.p>
 
         {/* CTAs */}
@@ -120,11 +140,17 @@ export function Hero() {
           }
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
-          <a href="#waitlist" className="btn-primary">
-            <span>Get Started</span>
+          <a href="#install" className="btn-primary">
+            <span>Get Started Free</span>
           </a>
-          <a href="#story" className="btn-magnetic">
-            <span>See How It Works</span>
+          <a
+            href="https://github.com/Escalate17/samskriti-project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-magnetic"
+          >
+            <Github className="w-4 h-4" />
+            <span>View on GitHub</span>
           </a>
         </motion.div>
       </motion.div>

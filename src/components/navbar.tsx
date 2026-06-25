@@ -48,10 +48,10 @@ export function Navbar() {
         {/* Links */}
         <div className="hidden md:flex items-center gap-9">
           <a
-            href="#story"
+            href="#install"
             className="text-[13px] font-medium tracking-[0.12em] uppercase text-white/65 hover:text-white transition-colors duration-300"
           >
-            How it works
+            Install
           </a>
           <a
             href="#compare"
@@ -60,16 +60,16 @@ export function Navbar() {
             Compare
           </a>
           <a
-            href="#compare"
+            href="#vision"
             className="text-[13px] font-medium tracking-[0.12em] uppercase text-white/65 hover:text-white transition-colors duration-300"
           >
-            Pricing
+            Where it's going
           </a>
         </div>
 
         {/* CTA */}
         <a
-          href="#waitlist"
+          href="#install"
           className="text-[13px] font-semibold tracking-[0.12em] uppercase text-white/90 hover:text-white transition-colors duration-300 border border-white/20 hover:border-white/40 rounded-full px-6 py-3 min-h-[44px] flex items-center cursor-pointer"
         >
           Get started free

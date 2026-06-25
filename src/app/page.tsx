@@ -1,11 +1,11 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { MemeComparison } from "@/components/meme-comparison";
-import { HowItWorks } from "@/components/how-it-works";
+import { Install } from "@/components/install";
 import { PrivacyBand } from "@/components/privacy-band";
 import { Pricing } from "@/components/pricing";
+import { HowItWorks } from "@/components/how-it-works";
+import { MemeComparison } from "@/components/meme-comparison";
 import { TestUserSurvey } from "@/components/test-user-survey";
-import { Waitlist } from "@/components/waitlist";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -13,13 +13,16 @@ export default function Home() {
     <>
       <Navbar />
       <main>
+        {/* Live product, first and brightest */}
         <Hero />
-        <MemeComparison />
-        <HowItWorks />
+        <Install />
         <PrivacyBand />
         <Pricing />
+        {/* Where this is going — the long-term vision */}
+        <HowItWorks />
+        <MemeComparison />
+        {/* Post-trial feedback */}
         <TestUserSurvey />
-        <Waitlist />
       </main>
       <Footer />
     </>

@@ -139,7 +139,7 @@ export function Pricing() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
-          {/* Sandbox / Early access */}
+          {/* Free / shipping product */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -150,14 +150,14 @@ export function Pricing() {
             }
             className="glass-card gradient-border p-10 flex flex-col border border-white/[0.04]"
           >
-            <p className="text-overline text-teal/60 mb-8">Developer Preview</p>
+            <p className="text-overline text-teal/60 mb-8">Local · Open-source</p>
             <div className="mb-2">
               <span className="text-6xl font-display font-medium text-white">
                 Free
               </span>
             </div>
             <p className="text-[15px] text-white/20 font-light mb-10">
-              During early access preview
+              Live now — MIT licensed, runs on your machine
             </p>
 
             <ul className="space-y-4 text-[16px] text-white/65 font-light mb-10 flex-1">
@@ -179,8 +179,8 @@ export function Pricing() {
               </li>
             </ul>
 
-            <a href="#waitlist" className="btn-primary w-full text-center justify-center">
-              <span>Join Developer Preview</span>
+            <a href="#install" className="btn-primary w-full text-center justify-center">
+              <span>Get Started Free</span>
             </a>
           </motion.div>
 
