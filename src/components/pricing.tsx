@@ -63,7 +63,12 @@ export function Pricing() {
               ))}
             </ul>
 
-            <a href="#install" className="btn-primary w-full text-center justify-center">
+            <a
+              href="https://github.com/Escalate17/samskriti-project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full text-center justify-center"
+            >
               <span>Get Started Free</span>
             </a>
           </motion.div>
