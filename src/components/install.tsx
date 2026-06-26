@@ -62,50 +62,10 @@ function Step({
   );
 }
 
-const MCP_TABS = [
-  {
-    key: "claude",
-    label: "Claude Code",
-    path: "~/.claude.json",
-    code: `{
-  "mcpServers": {
-    "samskriti-project": {
-      "command": "samskriti-project",
-      "args": []
-    }
-  }
-}`,
-  },
-  {
-    key: "cursor",
-    label: "Cursor",
-    path: "~/.cursor/mcp.json",
-    code: `{
-  "mcpServers": {
-    "samskriti-project": {
-      "command": "samskriti-project",
-      "args": []
-    }
-  }
-}`,
-  },
-  {
-    key: "codex",
-    label: "Codex",
-    path: "~/.codex/config.toml",
-    code: `[mcp_servers.samskriti-project]
-command = "samskriti-project"
-args = []`,
-  },
-] as const;
-
 export function Install() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
   const shouldReduceMotion = useReducedMotion();
-  const [tab, setTab] = useState<(typeof MCP_TABS)[number]["key"]>("claude");
-
-  const active = MCP_TABS.find((t) => t.key === tab)!;
 
   return (
     <section id="install" className="relative overflow-hidden scroll-mt-24" ref={ref}>
@@ -130,8 +90,8 @@ export function Install() {
             How to <span className="text-gradient">install.</span>
           </h2>
           <p className="text-body-lg max-w-xl mx-auto">
-            One command to install, one config block to connect it to your AI tool.
-            Runs entirely on your machine.
+            Install, run one setup command, restart your tool — done. No config files to
+            hand-edit. Runs entirely on your machine.
           </p>
         </motion.div>
 
@@ -156,42 +116,42 @@ export function Install() {
           </Step>
 
           {/* Step 2 */}
-          <Step n={2} title="Verify the install">
-            <CodeBlock code="samskriti-project --help" />
+          <Step n={2} title="Connect it — one command">
+            <CodeBlock code="samskriti-project setup" />
+            <p className="text-[14px] text-white/45 font-light mt-3 leading-relaxed">
+              This writes the MCP config for you (and backs up any existing config). Use{" "}
+              <code className="font-mono text-[13px] text-white/70 bg-white/[0.05] border border-white/[0.06] rounded px-1.5 py-0.5">
+                --cursor
+              </code>
+              ,{" "}
+              <code className="font-mono text-[13px] text-white/70 bg-white/[0.05] border border-white/[0.06] rounded px-1.5 py-0.5">
+                --codex
+              </code>
+              , or{" "}
+              <code className="font-mono text-[13px] text-white/70 bg-white/[0.05] border border-white/[0.06] rounded px-1.5 py-0.5">
+                --all
+              </code>{" "}
+              for other tools.{" "}
+              <a
+                href="https://github.com/Escalate17/samskriti-project#connect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-white underline underline-offset-2 transition-colors"
+              >
+                Prefer to edit config by hand?
+              </a>
+            </p>
           </Step>
 
           {/* Step 3 */}
-          <Step n={3} title="Connect it to your AI tool">
-            <p className="text-[15px] text-white/55 font-light mb-5">
-              Add this to your MCP config, then restart the tool.
-            </p>
-
-            {/* Tabs */}
-            <div className="flex gap-2 mb-4" role="tablist" aria-label="AI tool config">
-              {MCP_TABS.map((t) => {
-                const selected = tab === t.key;
-                return (
-                  <button
-                    key={t.key}
-                    type="button"
-                    role="tab"
-                    aria-selected={selected}
-                    onClick={() => setTab(t.key)}
-                    className={
-                      "min-h-[44px] px-5 rounded-full text-[14px] font-light transition-all duration-300 border " +
-                      (selected
-                        ? "bg-indigo-950/50 border-indigo/50 text-white ring-2 ring-indigo/10"
-                        : "bg-white/[0.03] border-white/[0.06] text-white/55 hover:border-white/15 hover:text-white/80")
-                    }
-                  >
-                    {t.label}
-                  </button>
-                );
-              })}
+          <Step n={3} title="Restart your AI tool">
+            <div className="rounded-xl bg-saffron/[0.06] border border-saffron/20 p-5">
+              <p className="text-[15px] text-white/75 font-light leading-relaxed">
+                Fully <span className="text-white font-medium">quit and reopen</span> Claude Code,
+                Cursor, or Codex. A running session won&apos;t pick up the server — MCP servers
+                load only when the tool starts.
+              </p>
             </div>
-
-            <p className="text-[13px] font-mono text-white/40 mb-3">{active.path}</p>
-            <CodeBlock code={active.code} />
           </Step>
 
           {/* Step 4 */}
