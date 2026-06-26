@@ -203,9 +203,65 @@ export function Install() {
               </code>{" "}
               — you should see{" "}
               <span className="text-white/85 font-normal">samskriti-project</span> listed with
-              its <span className="text-teal">5 tools</span>.
+              its <span className="text-teal">8 tools</span>.
             </p>
           </Step>
+        </motion.div>
+
+        {/* Helper commands */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={
+            shouldReduceMotion ? { duration: 0 } : { duration: 0.9, delay: 0.3, ease: [0.2, 0, 0, 1] }
+          }
+          className="glass-card p-8 sm:p-10 border border-white/[0.05] mt-10"
+        >
+          <p className="text-overline mb-4">Helper commands</p>
+          <p className="text-[15px] text-white/55 font-light mb-7 leading-relaxed">
+            Three shortcuts for the most common actions. Trigger them with{" "}
+            <code className="font-mono text-[13px] text-white/80 bg-white/[0.05] border border-white/[0.06] rounded px-1.5 py-0.5">
+              /sam
+            </code>{" "}
+            plus plain English — there is no standalone{" "}
+            <code className="font-mono text-[13px] text-white/60 bg-white/[0.04] border border-white/[0.06] rounded px-1.5 py-0.5">
+              /catchup
+            </code>{" "}
+            command.
+          </p>
+
+          <ul className="space-y-3 mb-8">
+            {[
+              { name: "catchup", desc: "“catch me up” — recap of the latest entries plus how many tasks are open." },
+              { name: "open", desc: "“what's open” — lists the active tasks." },
+              { name: "log", desc: "quick-log a decision (title auto-derived from the text)." },
+            ].map((t) => (
+              <li key={t.name} className="flex items-start gap-3 text-[15px] text-white/65 font-light">
+                <span className="shrink-0 text-xs font-mono font-bold tracking-wider text-indigo-300 bg-indigo-950/40 border border-indigo-900/40 px-2 py-0.5 rounded mt-0.5">
+                  {t.name}
+                </span>
+                <span>{t.desc}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <p className="text-[13px] font-mono text-white/40 mb-2">Claude Code / Cursor</p>
+              <pre className="overflow-x-auto rounded-xl bg-black/40 border border-white/[0.06] p-4 text-[13px] font-mono text-white/85 leading-relaxed">
+                <code>{`/sam catch me up
+/sam what's open
+/sam log dropping the Redis cache`}</code>
+              </pre>
+            </div>
+            <div>
+              <p className="text-[13px] font-mono text-white/40 mb-2">Any tool (plain English)</p>
+              <pre className="overflow-x-auto rounded-xl bg-black/40 border border-white/[0.06] p-4 text-[13px] font-mono text-white/85 leading-relaxed">
+                <code>{`use samskriti-project
+  to catch me up`}</code>
+              </pre>
+            </div>
+          </div>
         </motion.div>
 
         <motion.p
