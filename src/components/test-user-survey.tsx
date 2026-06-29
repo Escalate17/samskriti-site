@@ -67,12 +67,11 @@ export function TestUserSurvey() {
         >
           <p className="text-overline mb-6">Tried it?</p>
           <h2 className="heading-section mb-8">
-            Would you pay for a <span className="text-gradient">hosted version?</span>
+            Would you Pay for a <span className="text-gradient">Hosted Version?</span>
           </h2>
           <p className="text-body-lg mb-16 max-w-xl mx-auto">
-            Installed it and given it a spin? Tell us one thing — would you pay for a fully
-            hosted version, with nothing to install or run yourself? Leave your email if you
-            want hosting updates.
+            Tried it? One question: would you pay for a hosted version you don&apos;t have to
+            install or run yourself? Drop your email if you want updates.
           </p>
         </motion.div>
 

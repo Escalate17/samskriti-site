@@ -87,11 +87,11 @@ export function Install() {
             <Terminal className="w-3.5 h-3.5" /> Install in two minutes
           </p>
           <h2 className="heading-section mb-6">
-            How to <span className="text-gradient">install.</span>
+            How to <span className="text-gradient">Install.</span>
           </h2>
           <p className="text-body-lg max-w-xl mx-auto">
-            Install, run one setup command, restart your tool — done. No config files to
-            hand-edit. Runs entirely on your machine.
+            Install it, run one command, restart your tool. That&apos;s it — no config files to
+            mess with, and nothing leaves your machine.
           </p>
         </motion.div>
 

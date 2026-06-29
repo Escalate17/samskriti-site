@@ -34,9 +34,9 @@ export function HowItWorks() {
         >
           <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Where this is going</p>
           <h2 className="heading-section">
-            A shared memory layer
+            A Shared Memory Layer
             <br />
-            <span className="text-gradient">is just step one.</span>
+            <span className="text-gradient">is Just Step One.</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto mt-6">
             A shared memory layer is step one. The goal is an AI that carries your context,

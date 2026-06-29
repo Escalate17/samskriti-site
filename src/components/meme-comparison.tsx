@@ -222,9 +222,9 @@ export function MemeComparison() {
         >
           <p className="text-overline mb-6">A normal AI vs. Samskriti</p>
           <h2 className="heading-section mb-6">
-            Same conversation.
+            Same Conversation.
             <br />
-            <span className="text-gradient">One actually remembers.</span>
+            <span className="text-gradient">One Actually Remembers.</span>
           </h2>
         </motion.div>
 

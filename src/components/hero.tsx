@@ -86,12 +86,12 @@ export function Hero() {
 
         {/* Main headline — cinematic serif with word-by-word reveal */}
         <h1 className="heading-hero mb-8">
-          <WordReveal text="Your AI tools don't" delay={0.4} />
+          <WordReveal text="Your AI tools" delay={0.4} />
           <br />
-          <WordReveal text="talk to each other." delay={0.8} />
+          <WordReveal text="forget everything" delay={0.8} />
           <br />
           <span className="text-gradient">
-            <WordReveal text="Now they can." delay={1.2} />
+            <WordReveal text="when you switch" delay={1.2} />
           </span>
         </h1>
 
@@ -106,9 +106,9 @@ export function Hero() {
           }
           className="text-body-lg max-w-3xl mx-auto mb-8"
         >
-          You use Claude to code, GPT to plan, Gemini for design — and re-explain your project
-          every time you switch. Samskriti gives them one shared memory of your project:
-          decisions, tasks, bugs, conventions. Switch tools without starting over.
+          You explain your project to Claude, then open Cursor and explain it all over again.
+          Samskriti keeps one shared memory — decisions, tasks, bugs — so whatever tool
+          you&apos;re in already knows what&apos;s going on. Local, open source, runs on your machine.
         </motion.p>
 
         {/* Status line — bright, plain */}

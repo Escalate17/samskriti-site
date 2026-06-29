@@ -212,26 +212,23 @@
   }
 
   .orb-saffron {
-    background: radial-gradient(circle, rgba(255, 138, 61, 0.18), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 138, 61, 0.07), transparent 70%);
   }
 
   .orb-indigo {
-    background: radial-gradient(circle, rgba(124, 92, 255, 0.18), transparent 70%);
+    background: radial-gradient(circle, rgba(124, 92, 255, 0.07), transparent 70%);
   }
 
   .orb-teal {
-    background: radial-gradient(circle, rgba(54, 215, 196, 0.15), transparent 70%);
+    background: radial-gradient(circle, rgba(54, 215, 196, 0.06), transparent 70%);
   }
 
   /* ═══════════════════════════════════════════
      GRADIENT TEXT
      ═══════════════════════════════════════════ */
   .text-gradient {
-    background: var(--gradient-brand);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
   }
 
   /* ═══════════════════════════════════════════
@@ -264,15 +261,15 @@
     position: absolute;
     inset: 0;
     border-radius: 50px;
-    background: var(--gradient-brand);
+    background: rgba(255, 255, 255, 0.08);
     opacity: 0;
     transition: opacity 400ms ease;
   }
 
   .btn-magnetic:hover {
-    border-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 16px 48px -8px rgba(124, 92, 255, 0.3);
+    box-shadow: 0 14px 36px -10px rgba(0, 0, 0, 0.5);
   }
 
   .btn-magnetic:hover::before {
@@ -295,10 +292,9 @@
     justify-content: center;
     gap: 10px;
     padding: 18px 40px;
-    background: var(--gradient-brand);
-    background-size: 200% auto;
-    color: white;
-    font-weight: 500;
+    background: #f5f2ec;
+    color: #15121c;
+    font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -311,11 +307,9 @@
   }
 
   .btn-primary:hover {
-    background-position: right center;
+    background: #ffffff;
     transform: translateY(-3px);
-    box-shadow:
-      0 16px 48px -8px rgba(124, 92, 255, 0.35),
-      0 8px 24px rgba(255, 138, 61, 0.15);
+    box-shadow: 0 14px 36px -10px rgba(0, 0, 0, 0.55);
   }
 
   .btn-primary:focus-visible {

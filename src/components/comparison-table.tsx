@@ -36,7 +36,7 @@ export function ComparisonTable() {
           <div className="text-center mb-16">
             <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">The goal</p>
             <h2 className="heading-section">
-              More than memory. <span className="text-gradient">A companion that carries you.</span>
+              More Than Memory. <span className="text-gradient">A Companion That Carries you.</span>
             </h2>
             <p className="text-body-lg max-w-2xl mx-auto mt-4">
               Standard model memory recalls text facts. This is the direction we&apos;re building

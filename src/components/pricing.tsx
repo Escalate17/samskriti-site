@@ -30,7 +30,7 @@ export function Pricing() {
         >
           <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Pricing</p>
           <h2 className="heading-section">
-            Free and <span className="text-gradient">open-source.</span>
+            Free and <span className="text-gradient">Open-Source.</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto mt-4">
             The local runtime is free, MIT licensed, and yours to run. No account, no cloud.

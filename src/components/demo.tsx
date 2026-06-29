@@ -40,11 +40,11 @@ export function Demo() {
         >
           <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">See it work</p>
           <h2 className="heading-section">
-            One decision, <span className="text-gradient">two tools.</span>
+            One Decision, <span className="text-gradient">two Tools.</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto mt-4">
-            Record something in one AI tool, read it back in another — no copy-paste, no
-            re-explaining. Here is the handoff happening for real.
+            Record something in one tool, read it back in another. No copy-paste, no
+            re-explaining. Here&apos;s the actual handoff:
           </p>
         </motion.div>
 

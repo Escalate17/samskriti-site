@@ -29,12 +29,12 @@ export function PrivacyBand() {
         >
           <p className="text-overline mb-6">Deterministic & Auditable</p>
           <h2 className="heading-section mb-8">
-            Distilled state.
+            Distilled State.
             <br />
-            <span className="text-gradient">Zero conversation logs.</span>
+            <span className="text-gradient">Zero Conversation Logs.</span>
           </h2>
           <p className="text-body-lg max-w-2xl mx-auto mb-20">
-            Samskriti does not store, upload, or process raw chat logs. Instead, it extracts abstract behavioral rules and maintains them in local-first JSON state contracts. This ensures compliance, auditability, and complete model portability.
+            Samskriti doesn&apos;t store or upload your chat logs. It pulls out the decisions and rules and keeps them as plain JSON on your machine. Nothing to audit, nothing in the cloud, easy to move.
           </p>
         </motion.div>
 
