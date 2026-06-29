@@ -38,7 +38,7 @@ export function Demo() {
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: [0.2, 0, 0, 1] }}
           className="text-center mb-16"
         >
-          <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">See it work</p>
+          <p className="text-overline mb-6 font-mono tracking-[0.25em]">See it work</p>
           <h2 className="heading-section">
             One Decision, <span className="text-gradient">two Tools.</span>
           </h2>

@@ -32,7 +32,7 @@ export function HowItWorks() {
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: [0.2, 0, 0, 1] }}
           className="text-center mb-20"
         >
-          <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Where this is going</p>
+          <p className="text-overline mb-6 font-mono tracking-[0.25em]">Where this is going</p>
           <h2 className="heading-section">
             A Shared Memory Layer
             <br />
@@ -91,7 +91,7 @@ export function HowItWorks() {
             transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: [0.2, 0, 0, 1] }}
             className="text-center mb-20"
           >
-            <p className="text-overline mb-6 font-mono tracking-[0.25em] text-white/35">Architecture</p>
+            <p className="text-overline mb-6 font-mono tracking-[0.25em]">Architecture</p>
             <h2 className="heading-section">
               An External <span className="text-gradient">Behavioral Layer</span>
             </h2>

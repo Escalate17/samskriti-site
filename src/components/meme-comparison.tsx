@@ -231,7 +231,7 @@ export function MemeComparison() {
         {/* Column headers */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div className="text-center">
-            <span className="text-overline text-white/45">A normal AI</span>
+            <span className="text-overline">A normal AI</span>
           </div>
           <div className="text-center">
             <span className="text-overline text-gradient">With Samskriti</span>

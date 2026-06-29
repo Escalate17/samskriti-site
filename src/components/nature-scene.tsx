@@ -305,16 +305,15 @@ export function NatureScene() {
       ...companionsData.map((c) => ({ x: c.x, z: c.z, y: getHeight(c.x, c.z) })),
     ];
 
+    // ponytail: connect every pair within range (no 2-connection cap that orphaned most nodes)
     for (let i = 0; i < allNodes.length; i++) {
-      let connections = 0;
       for (let j = i + 1; j < allNodes.length; j++) {
         const dx = allNodes[i].x - allNodes[j].x;
         const dz = allNodes[i].z - allNodes[j].z;
         const dist = Math.sqrt(dx * dx + dz * dz);
-        if (dist < connectionDist && connections < 2) {
+        if (dist < connectionDist) {
           linePositions.push(allNodes[i].x, allNodes[i].y + 0.15, allNodes[i].z);
           linePositions.push(allNodes[j].x, allNodes[j].y + 0.15, allNodes[j].z);
-          connections++;
         }
       }
     }
